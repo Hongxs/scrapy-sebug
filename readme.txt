@@ -1,12 +1,12 @@
 # scrapy-sebug
 
-ä½¿ç”¨scrapyæ¡†æ¶çˆ¬å–sebugæ¼æ´åº“å†…å®¹ï¼Œå¹¶å­˜å…¥mysqlæ•°æ®åº“ã€‚
+Ê¹ÓÃscrapy¿ò¼ÜÅÀÈ¡sebugÂ©¶´¿âÄÚÈİ£¬²¢´æÈëmysqlÊı¾İ¿â¡£
 
-ä¸å¤ªäº†è§£scrapyçš„ç«¥é‹çœ‹è¿™é‡Œï¼šhttp://doc.scrapy.org/en/0.24/intro/overview.html
+²»Ì«ÁË½âscrapyµÄÍ¯Ğ¬¿´ÕâÀï£ºhttp://doc.scrapy.org/en/0.24/intro/overview.html
 
 ==========================
 
-ï¼ˆ1ï¼‰ç®€å•å®šä¹‰sebugçš„æ¼æ´è¯¦æƒ…é¡µçš„itemæ•°æ®ç»“æ„ï¼š
+£¨1£©¼òµ¥¶¨ÒåsebugµÄÂ©¶´ÏêÇéÒ³µÄitemÊı¾İ½á¹¹£º
 
 class SebugItem(scrapy.Item):
     # define the fields for your item here like:
@@ -17,17 +17,14 @@ class SebugItem(scrapy.Item):
     content = Field()
     publishdate = Field()
     
-ï¼ˆ2ï¼‰mysqlæ•°æ®åº“åˆ›å»ºç›¸åº”çš„è¡¨ç»“æ„
+£¨2£©mysqlÊı¾İ¿â´´½¨ÏàÓ¦µÄ±í½á¹¹
 
-ï¼ˆ3ï¼‰ä¸ºé˜²æ­¢çˆ¬è™«è¢«ban,è®¾ç½®setting.py
+£¨3£©Îª·ÀÖ¹ÅÀ³æ±»ban,ÉèÖÃsetting.py
 
 DOWNLOAD_DELAY = 2
 RANDOMIZE_DOWNLOAD_DELAY = True
 USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.5 (KHTML, like Gecko) Chrome/19.0.1084.54 Safari/536.5'
 
-ï¼ˆ4ï¼‰å¼€å§‹è¿è¡Œçˆ¬è™«
+£¨4£©¿ªÊ¼ÔËĞĞÅÀ³æ
 
 scrapy crawl sebugvul
-
-
-
