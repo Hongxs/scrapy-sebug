@@ -16,7 +16,7 @@ class SebugvulSpider(CrawlSpider):
    
     rules = [
 	Rule(SgmlLinkExtractor(allow=('/vuldb/ssvid-(\d{1,6})$',)),callback='parse_vul'),
-	Rule(SgmlLinkExtractor(allow=('/vuldb/vulnerabilities\?start=(\d{1,2})$',)),follow=True)
+	Rule(SgmlLinkExtractor(allow=('/vuldb/vulnerabilities\?start=(\d{1,5})$',)),follow=True)
 ]
 
     def parse_vul(self, response):
@@ -33,4 +33,3 @@ class SebugvulSpider(CrawlSpider):
 	item['content'] = hxs.select('//div[@class="article_exp"]/pre/text()').extract()[0]
 #	print item['content'] 
 	return item
- # pass
