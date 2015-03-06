@@ -24,7 +24,7 @@ class SebugPipeline(object):
 	self.dbpool = adbapi.ConnectionPool('MySQLdb',
 		db = 'sebug',
 		user = 'root',
-		passwd = 'wafmysql',
+		passwd = 'xxx',
 		cursorclass = MySQLdb.cursors.DictCursor,
 		charset = 'utf8',
 		use_unicode = False
